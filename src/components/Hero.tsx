@@ -21,21 +21,21 @@ export const Hero: React.FC = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile image placeholder */}
-          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1 animate-fade-in">
+          {/* <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1 animate-fade-in">
             <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
               <span className="text-4xl font-bold text-gray-600 dark:text-gray-300">YN</span>
             </div>
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             <span className="text-gray-900 dark:text-white">Hi, I'm </span>
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Your Name
+              Vidit Joshi
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in">
-            Full Stack Developer & UI/UX Designer
+            Aspiring Software Engineer
           </p>
 
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in">
@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12 animate-fade-in">
             <a
-              href="https://github.com"
+              href="https://github.com/Vidit-exe"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110"
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
               <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/vidit-j-344064244/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110"
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
               <Linkedin className="w-6 h-6 text-gray-700 dark:text-gray-300" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:joshividit11@gmail.com"
               className="p-3 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-6 h-6 text-gray-700 dark:text-gray-300" />

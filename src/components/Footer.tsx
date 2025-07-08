@@ -68,10 +68,9 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400 flex items-center justify-center space-x-2">
-              <span>© {currentYear} Portfolio. Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>by Your Name</span>
+            <p className="text-gray-400 lg:flex lg:items-center lg:justify-center space-x-2">
+              <span>© {currentYear} Portfolio. Made by Vidit Joshi and team.</span>
+              <p>All rights reserved.</p>
             </p>
           </div>
         </div>

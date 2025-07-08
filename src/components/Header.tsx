@@ -34,8 +34,8 @@ export const Header: React.FC = () => {
   const downloadResume = () => {
     // You can replace this with your actual resume file
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'resume.pdf';
+    link.href = '/Vidit-Professional-CV-Resume.pdf';
+    link.download = `Vidit's Resume.pdf`;
     link.click();
   };
 
@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Portfolio
+          Vidit's Portfolio
         </div>
 
         {/* Desktop Navigation */}

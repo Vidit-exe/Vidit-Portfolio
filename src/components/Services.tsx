@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Palette, Smartphone, Globe, Database, Zap } from 'lucide-react';
+import { Code, Palette, Smartphone, Globe, Database, Zap, Workflow } from 'lucide-react';
 
 export const Services: React.FC = () => {
   const services = [
@@ -11,10 +11,10 @@ export const Services: React.FC = () => {
       features: ["React/Next.js", "TypeScript", "Responsive Design", "Performance Optimization"]
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful and intuitive user interfaces that provide exceptional user experiences.",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
+      icon: Workflow,
+      title: "DevOps",
+      description: "Emerging into the world of multitasking. Performing talents of server and clients.",
+      features: ["Docker", "Kubernetes", "Jenkins", "AWS"]
     },
     {
       icon: Smartphone,
@@ -32,7 +32,7 @@ export const Services: React.FC = () => {
       icon: Database,
       title: "Backend Development",
       description: "Robust server-side applications with scalable architecture and APIs.",
-      features: ["Node.js", "Python", "RESTful APIs", "Database Management"]
+      features: ["Node.js", "Django", "Spring Boot", "Database Management"]
     },
     {
       icon: Zap,

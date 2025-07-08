@@ -1,21 +1,49 @@
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
+const scriptURL = "https://script.google.com/macros/s/AKfycby_UoibnaOOPgqmF_8Uz4D8QLvk_BuIMKq5koXsnWFZNTnXf7QMYGBBfkuGeTII_r6Q/exec"
+
 export const Contact: React.FC = () => {
+  const formRef = useRef<HTMLFormElement | null>(null)
+  const [status, setStatus] = useState<"success" | "error" | null>(null)
+
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    Name: '',
+    Email: '',
+    Subject: '',
+    Message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+
+    try {
+      const form = formRef.current
+      if (!form) return
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      })
+
+      if (response.ok) {
+        setStatus("success")
+        form.reset()
+        setTimeout(() => setStatus(null), 3000)
+      } else {
+        setStatus("error")
+        setTimeout(() => setStatus(null), 3000)
+      }
+    } catch (error) {
+      console.error("Submission Error:", error)
+      setStatus("error")
+      setTimeout(() => setStatus(null), 3000)
+    }
     // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ Name: '', Email: '', Subject: '', Message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,19 +57,19 @@ export const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "joshividit11@gmail.com",
+      href: "mailto:joshividit11@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 81604 71647",
+      href: "tel:+918160471647"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "City, Country",
+      value: "Ahmedabad, India",
       href: null
     }
   ];
@@ -102,31 +130,31 @@ export const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-200/20 dark:border-gray-700/20 shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} ref={formRef} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label htmlFor="Name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Name
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="Name"
+                      name="Name"
+                      value={formData.Name}
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label htmlFor="Email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Email
                     </label>
                     <input
                       type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
+                      id="Email"
+                      name="Email"
+                      value={formData.Email}
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300"
@@ -135,14 +163,14 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="Subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Subject
                   </label>
                   <input
                     type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
+                    id="Subject"
+                    name="Subject"
+                    value={formData.Subject}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300"
@@ -150,13 +178,13 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="Message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Message
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
+                    id="Message"
+                    name="Message"
+                    value={formData.Message}
                     onChange={handleChange}
                     rows={6}
                     required
@@ -172,6 +200,16 @@ export const Contact: React.FC = () => {
                   <span>Send Message</span>
                 </button>
               </form>
+              {status === "success" && (
+              <p className="mt-6 text-green-600">
+                ✅ Message sent successfully!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="mt-6 text-red-600">
+                ❌ Failed to send. Please try again.
+              </p>
+            )}
             </div>
           </div>
         </div>

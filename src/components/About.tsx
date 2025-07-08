@@ -42,8 +42,8 @@ export const About: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a passionate full-stack developer with over 3 years of experience in creating 
-                web applications and digital solutions. I specialize in modern technologies and 
+                I'm a passionate developer with over 1 year of experience in creating 
+                web applications, mobile apps, databases and digital solutions. I specialize in modern technologies and 
                 love bringing ideas to life through code.
               </p>
               
@@ -54,7 +54,7 @@ export const About: React.FC = () => {
               </p>
 
               <div className="flex flex-wrap gap-3 pt-4">
-                {['React', 'TypeScript', 'Node.js', 'Python', 'UI/UX Design', 'MongoDB'].map((tech) => (
+                {['React', 'TypeScript', 'Node.js', 'Java', 'Spring Boot', 'Python', 'Django', 'UI/UX Design', 'MongoDB', 'DevOps'].map((tech) => (
                   <span
                     key={tech}
                     className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"

@@ -2,26 +2,25 @@
 import React from 'react';
 import { Code, Palette, Smartphone, Globe, Database, Zap, Workflow } from 'lucide-react';
 import admin from '../admin-panel-project.png'
+import carscout from '../car-scout-project.png'
+import movieapp from '../movie-app-project.png'
 
 export const Projects: React.FC = () => {
   const projects = [
     {
       icon: admin,
-      title: "Web Development",
+      title: "Admin Panel",
       description: "Custom web applications built with modern technologies and best practices.",
-      features: ["React/Next.js", "TypeScript", "Responsive Design", "Performance Optimization"]
     },
     {
-      icon: Workflow,
-      title: "DevOps",
+      icon: carscout,
+      title: "Car Scout",
       description: "Emerging into the world of multitasking. Performing talents of server and clients.",
-      features: ["Docker", "Kubernetes", "Jenkins", "AWS"]
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
+      icon: movieapp,
+      title: "Movie App",
       description: "Cross-platform mobile applications that work seamlessly on all devices.",
-      features: ["React Native", "Flutter", "iOS/Android", "App Store Deployment"]
     },
   ];
 
@@ -39,34 +38,23 @@ export const Projects: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((service, index) => (
+            {projects.map((project, index) => (
               <div
                 key={index}
                 className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl border border-gray-200/20 dark:border-gray-700/20 hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <img src={project.icon} alt="" />
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  {service.title}
+                  {project.title}
                 </h3>
                 
                 <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                  {service.description}
+                  {project.description}
                 </p>
-                
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center text-sm text-gray-500 dark:text-gray-400"
-                    >
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <button></button>
               </div>
             ))}
           </div>

@@ -1,11 +1,12 @@
 
 import React from 'react';
 import { Code, Palette, Smartphone, Globe, Database, Zap, Workflow } from 'lucide-react';
+import admin from '../admin-panel-project.png'
 
 export const Projects: React.FC = () => {
   const projects = [
     {
-      icon: Code,
+      icon: admin,
       title: "Web Development",
       description: "Custom web applications built with modern technologies and best practices.",
       features: ["React/Next.js", "TypeScript", "Responsive Design", "Performance Optimization"]
@@ -22,24 +23,6 @@ export const Projects: React.FC = () => {
       description: "Cross-platform mobile applications that work seamlessly on all devices.",
       features: ["React Native", "Flutter", "iOS/Android", "App Store Deployment"]
     },
-    {
-      icon: Globe,
-      title: "Full Stack Solutions",
-      description: "End-to-end web solutions from frontend to backend and database design.",
-      features: ["API Development", "Database Design", "Cloud Deployment", "Security"]
-    },
-    {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side applications with scalable architecture and APIs.",
-      features: ["Node.js", "Django", "Spring Boot", "Database Management"]
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Optimize your applications for speed, efficiency, and better user experience.",
-      features: ["Code Optimization", "SEO", "Load Time Improvement", "Caching Strategies"]
-    }
   ];
 
   return (

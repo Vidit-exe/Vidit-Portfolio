@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:joshividit11@gmail.com"
+                  href="mailto:collab@viditjoshi.in"
                   className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
                 >
                   <Mail className="w-5 h-5" />

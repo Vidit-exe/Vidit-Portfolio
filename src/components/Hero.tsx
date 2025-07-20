@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const scrollToAbout = () => {
@@ -66,6 +66,12 @@ export const Hero: React.FC = () => {
               className="p-3 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+            </a>
+            <a
+              href="https://www.instagram.com/vidit.codes/"
+              className="p-3 bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110"
+            >
+              <Instagram className="w-6 h-6 text-gray-700 dark:text-gray-300" />
             </a>
           </div>
 

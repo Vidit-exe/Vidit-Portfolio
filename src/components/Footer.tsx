@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import { Heart, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
                 Portfolio
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Building digital experiences that make a difference. 
+                Building digital experiences that make a difference.
                 Let's create something amazing together.
               </p>
             </div>
@@ -40,14 +40,14 @@ export const Footer: React.FC = () => {
             {/* Social Links */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">Connect</h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 items-center">
                 <a
                   href="https://github.com/Vidit-exe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/vidit-j-344064244/"
@@ -55,16 +55,23 @@ export const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="mailto:collab@viditjoshi.in"
                   className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5 text-white" />
+                </a>
+                <a
+                  href="https://www.instagram.com/vidit.codes/"
+                  className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+                >
+                  <Instagram className="w-5 h-5 text-white" />
                 </a>
               </div>
             </div>
+
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">

@@ -57,7 +57,7 @@ export const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "mailto:collab@viditjoshi.in",
+      value: "collab@viditjoshi.in",
       href: "mailto:collab@viditjoshi.in"
     },
     {

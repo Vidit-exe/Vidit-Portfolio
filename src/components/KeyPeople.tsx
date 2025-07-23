@@ -1,31 +1,51 @@
 import React from 'react';
 import Vidit from '/myphoto.jpg';
 import Shubh from '/shubhphoto.jpg';
+import Mehul from '/mehulphoto.jpg';
 
 interface Developer {
+    suffix:  String;
     name: string;
     title: string;
     domain: string;
     techStack: string[];
     image: string;
+    deg: String;
+    pass: String;
 }
 
 const KeyPeople: React.FC = () => {
     const developers: Developer[] = [
         {
+            suffix: "Er.",
             name: "Vidit Joshi",
             title: "Developer",
             domain: "Web Development",
-            techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL", "Java", "Git", "Github"],
+            techStack: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "MySQL", "Java", "Git", "Github"],
             image: Vidit,
+            deg: "B.Tech - Information Technology",
+            pass: "2025"
         },
         {
+            suffix: "Er.",
             name: "Shubh Patel",
             title: "Developer",
             domain: "Mobile App Development",
             techStack: ["Flutter", "Java", "Spring Boot", "MySQL", "Android Studio", "Git", "Github"],
             image: Shubh,
-        }
+            deg: "B.Tech - Information Technology",
+            pass: "2025"
+        },
+        {
+            suffix: "Er.",
+            name: "Mehul Gajjar",
+            title: "Developer",
+            domain: "Web Development",
+            techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL", "Java", "Spring Boot", "Git", "Github"],
+            image: Mehul,
+            deg: "B.Tech - Information Technology",
+            pass: "2025"
+        },
     ];
 
     return (
@@ -60,8 +80,11 @@ const KeyPeople: React.FC = () => {
                                 </div>
 
                                 <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-1">
-                                    {dev.name}
+                                    {dev.suffix}&nbsp;{dev.name}
                                 </h3>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                                    {dev.deg} - {dev.pass}
+                                </p>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
                                     {dev.title} — {dev.domain}
                                 </p>

@@ -2,6 +2,7 @@ import React from 'react';
 import Vidit from '/myphoto.jpg';
 import Shubh from '/shubhphoto.jpg';
 import Mehul from '/mehulphoto.jpg';
+import Deep from '/deepphoto.jpg';
 
 interface Developer {
     suffix:  String;
@@ -43,6 +44,16 @@ const KeyPeople: React.FC = () => {
             domain: "Web Development",
             techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL", "Java", "Spring Boot", "Git", "Github"],
             image: Mehul,
+            deg: "B.Tech - Information Technology",
+            pass: "2025"
+        },
+        {
+            suffix: "Er.",
+            name: "Deep Patel",
+            title: "Developer",
+            domain: "Web Development",
+            techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "MySQL", "Python", "Git", "Github"],
+            image: Deep,
             deg: "B.Tech - Information Technology",
             pass: "2025"
         },
